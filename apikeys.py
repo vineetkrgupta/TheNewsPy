@@ -1,0 +1,1 @@
+newsapikey = 'b03639bade1a43b78d1b833c4d6b6783'

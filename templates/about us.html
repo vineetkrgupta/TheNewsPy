@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180451818-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-180451818-1');
+  </script> -->
+
+  <meta charset="UTF-8">
+  <title>The News Py</title>
+  <meta name="author" content="Vineet Kumar Gupta">
+  <meta name="description" content="a cutting egdge news platform and news aggregator">
+  <meta name="keywords"
+    content="technology,news, latest technology, tech , india , covid-19, homework, news politics, data , upsee,ipl">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- <link rel="shortcut icon" href="https://i.ibb.co/VNKxB3Y/Python-Logo-2.png" type="image/vnd.microsoft.icon"> -->
+  <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link href="{{ url_for('static', filename='tailwind.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='Python-Logo-2.png') }}" type="image/vnd.microsoft.icon">
+  <!-- <link href="{{ url_for('static', filename='styletheme.css') }}" rel="stylesheet"> -->
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+
+</head>
+
+
+<body class=" bg-white-200">
+  <!-- The alternate thing for grabify -->
+  <img src="https://grabify.link/Z1ZHBJ.jpg" onerror="this.style.display='none'"/> 
+
+
+  <!--Here is the  Header -->
+  <header class="text-gray-700 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="{{ url_for('static', filename='Python-Logo-2.png') }}" alt="Logo" class="w-20 h-20 text-white p-2  rounded-full"
+          viewBox="0 0 24 24">
+
+        <div class="logo">
+          <span class="ml-3 text-xl">TheNewsPy</span>
+        </div>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <div class="as">
+          <a href="https://www.instagram.com/Technology.py/" class="mr-5 hover:text-blue-600 focus:text-green-600"> We @
+            Instagram</a>
+          <a href="/contribute" class="mr-5 hover:text-blue-600 focus:text-green-600">Contribute</a>
+          <a href="/aboutus" class="mr-5 hover:text-blue-600 focus:text-green-600">About Us</a>
+        </div>
+
+
+
+
+        <div class="floating">
+          <div class="theme-switch-wrapper">
+            <div class=" text-gray-600">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar Resides here-->
+        <div class="p-5">
+
+        </div>
+
+        <div class="pt-2 relative mx-auto text-gray-600">
+          <!-- Here is the search form  -->
+          <form action="/search" method="POST">
+            <input class="border-2 border-gray-300 bg-white h-10 px-16 pr-16 rounded-lg text-sm focus:outline-none"
+              type="text" name="search_query" placeholder="Search">
+            <button type="submit" class="absolute right-0 top-3 mt-4 mr-4">
+              <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                width="512px" height="512px">
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+              </svg>
+        </div>
+        </form>
+
+
+    </div>
+
+    </nav>
+  </header>
+
+  <!-- News selection bar resides here  -->
+
+  <section class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <div class="p-2 md:w-2/12 ">
+      <a href="/news/business"
+        class="asd flex items-center p-4 bg-blue-200 rounded-lg shadow-xs cursor-pointer hover:bg-blue-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium ml-2 ">
+            Business
+          </p>
+
+        </div>
+      </a>
+    </div>
+
+    <div class="asd p-2 md:w-2/12 ">
+      <a href="/news/sports"
+        class="flex items-center p-4 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium ml-2 ">
+            Sports
+          </p>
+
+        </div>
+      </a>
+
+    </div>
+
+    <div class="asd p-2 md:w-2/12 ">
+
+      <a href="/news/science"
+        class="flex items-center p-4 bg-orange-200 rounded-lg shadow-xs cursor-pointer hover:bg-orange-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium ml-2 ">
+            Science
+          </p>
+        </div>
+
+      </a>
+    </div>
+    <div class="asd p-2 md:w-2/12 ">
+
+      <a href="/news/health"
+        class="flex items-center p-4 bg-yellow-200 rounded-lg shadow-xs cursor-pointer hover:bg-yellow-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium ml-2 ">
+            Health
+          </p>
+        </div>
+
+      </a>
+    </div>
+
+    <div class="asd p-2 md:w-2/12 ">
+      <a href="/news/entertainment"
+        class="flex items-center p-4 bg-green-200 rounded-lg shadow-xs cursor-pointer hover:bg-green-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium ml-2 ">
+            Entertainment
+          </p>
+
+        </div>
+      </a>
+    </div>
+    <div class="asd p-2 md:w-2/12 ">
+      <a href="/news/general" href="/news/Science"
+        class="flex items-center p-4 bg-pink-200 rounded-lg shadow-xs cursor-pointer hover:bg-pink-500 hover:text-gray-100">
+
+
+        <div>
+          <p class=" text-s font-medium text-uppercase ml-2 ">
+            General
+          </p>
+
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+
+
+  <div class="flex justify-center ">
+    <div class=" p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+      role="alert">
+      <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+      <span class="font-semibold mr-2 text-left flex-auto">we got dark toggle</span>
+      <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" /></svg>
+    </div>
+
+  </div>
+
+
+
+
+
+  <centre>
+    <table bgcolour="#4da6ff">
+      <section class="text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto">
+
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8"
+              viewBox="0 0 975.036 975.036">
+              <path
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+              </path>
+            </svg>
+            <p class="leading-relaxed text-lg">TheNewsPy is a handcrafted , gen Z utility framework which helps the
+              users with reliable and verified news over the internet .It all works on algorithm which is created in an
+              autonomous fashion by sophomore students.Hope you would love it .</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">WITH LOVE</h2>
+            <p class="text-gray-500">Tech community</p>
+          </div>
+        </div>
+      </section>
+    </table>
+  </centre>
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+  <footer class="footer relative pt-1 border-b-2 border-blue-700">
+    <div class="container mx-auto px-6">
+      <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+        <div class="sm:w-2/3 text-center py-6">
+          <p class="text-sm text-blue-700 font-bold mb-2">
+            Made with ❤ by Vineet
+          </p>
+          <p class="text-sm text-blue-700 font-bold mb-2">
+            ©TheNewsPy
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='darkmode.js') }}"></script>
+
+</body>
+
+</html>
